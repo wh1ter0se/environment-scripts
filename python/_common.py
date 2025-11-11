@@ -1,7 +1,6 @@
 import os
 import re
 import subprocess
-import datetime as dt
 
 
 class UvVersionInfo:
@@ -46,7 +45,7 @@ def format_prefix(prefix: str | None) -> str:
 
 
 def run_cmd(
-    cmd: str|list[str],
+    cmd: str | list[str],
     check: bool = False,
     stdout: int = subprocess.PIPE,
     stderr: int = subprocess.PIPE,
@@ -60,7 +59,6 @@ def run_cmd(
         stderr=stderr,
         shell=shell,
     )
-    
 
 
 def user_is_running_windows() -> bool:
