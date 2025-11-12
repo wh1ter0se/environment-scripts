@@ -1,4 +1,4 @@
 [submodule "scripts/src"]
-	path = temp
+	path = scripts
 	url = https://github.com/wh1ter0se/env.py.scripts.git
 	branch = main
