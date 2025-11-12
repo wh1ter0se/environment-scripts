@@ -1,0 +1,71 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Packages",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": ["scripts/build_packages.py"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Create Virtual Environment (venv)",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": ["scripts/create_venv.py"],
+            "group": {
+                "kind": "none",
+                "isDefault": false,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Generate Stubs",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": ["scripts/generate_stubs.py"],
+            "group": {
+                "kind": "none",
+                "isDefault": false,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Install Dependencies",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": ["scripts/install_dependencies.py"],
+            "group": {
+                "kind": "none",
+                "isDefault": false,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Install uv",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": ["scripts/install_uv.py"],
+            "group": {
+                "kind": "none",
+                "isDefault": false,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Setup Environment",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": ["scripts/setup_dev_environment.py"],
+            "group": {
+                "kind": "none",
+                "isDefault": false,
+            },
+            "problemMatcher": []
+        },
+    ]
+}

@@ -1,7 +1,10 @@
 {
+    "git.autofetch": true,
     "editor.formatOnSave": true,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+    "files.exclude": {
+        "**/*.pyc": true,
+        "**/__pycache__/**": true,
+        "**/.mypy_cache/**": true
     },
     "editor.rulers": [
         {
@@ -16,5 +19,15 @@
             "column": 100,
             "color": "#373737"
         },
-    ]
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "python.analysis.stubPath": "stubs",
+    "mypy-type-checker.severity": {
+        "error": "Warning"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
 }
